@@ -1,0 +1,28 @@
+<%@ page language="PL/SQL" %>
+<%@ plsql procedure="C2" %>
+
+<html>
+	<head>
+		<title>CUBE_2</title>
+	</head>
+	<body>
+	<center>
+				<a href="Menu_Glowne">Back</a></center>
+				<center>
+				<table border="1">
+				<td>ID_LINII</td>
+				<td>LICZBA_PRZYSTANKOW</td>
+				<% FOR I IN (SELECT LINIA.ID_LINII, ROZKLAD.LICZBA_PRZYSTANKOW
+					FROM LINIA
+					JOIN ROZKLAD ON LINIA.ID_ROZKLADU=ROZKLAD.ID_ROZKLADU
+					GROUP BY CUBE(LINIA.ID_LINII, ROZKLAD.LICZBA_PRZYSTANKOW)) LOOP %>
+				<tr>			
+					<td><%= I.ID_LINII%></td>
+					<td><%= I.LICZBA_PRZYSTANKOW%></td>
+				<tr>
+				<% END LOOP; %>
+			</table>
+			</form>
+		</center>
+	</body>
+</html>

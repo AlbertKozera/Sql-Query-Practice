@@ -1,0 +1,27 @@
+<%@ page language="PL/SQL" %>
+<%@ plsql procedure="R2" %>
+
+<html>
+	<head>
+		<title>ROLLUP_2</title>
+	</head>
+	<body>
+	<center>
+				<a href="Menu_Glowne">Back</a></center>
+				<center>
+				<table border="1">
+				<td>ID_PRZEJAZDU</td>
+				<td>LICZBA_KM</td>
+				<% FOR I IN (SELECT PRZEJAZD.ID_PRZEJAZDU, PRZEJAZD.LICZBA_KILOMETROW AS LICZBA_KM
+					FROM PRZEJAZD
+					GROUP BY ROLLUP(PRZEJAZD.ID_PRZEJAZDU, PRZEJAZD.LICZBA_KILOMETROW)) LOOP %>
+				<tr>			
+					<td><%= I.ID_PRZEJAZDU%></td>
+					<td><%= I.LICZBA_KM%></td>
+				<tr>
+				<% END LOOP; %>
+			</table>
+			</form>
+		</center>
+	</body>
+</html>

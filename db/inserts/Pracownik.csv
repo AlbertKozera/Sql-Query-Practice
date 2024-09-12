@@ -1,0 +1,500 @@
+1,administrator,11052,229
+2,zarzadca sieci,9810,370
+3,mechanik,5566,208
+4,mechanik,5014,211
+5,administrator,8636,72
+6,konsultant,9505,328
+7,dyrektor,8188,412
+8,ksiegowy,6600,487
+9,przedstawiciel handlowy,6119,261
+10,kontroler,13022,43
+11,mechanik,12562,443
+12,dyrektor,6934,380
+13,zarzadca sieci,7509,36
+14,przedstawiciel handlowy,5878,223
+15,sprzatacz,12682,210
+16,kontroler,13242,415
+17,kontroler,5380,159
+18,mechanik,10402,151
+19,informatyk,1930,188
+20,dyrektor,11226,478
+21,przedstawiciel handlowy,7566,96
+22,kierowca,3748,466
+23,zarzadca sieci,2958,357
+24,kontroler,11555,172
+25,zarzadca sieci,5254,15
+26,informatyk,9670,408
+27,kontroler,2255,64
+28,informatyk,5328,68
+29,przedstawiciel handlowy,7096,319
+30,sprzatacz,8832,125
+31,zarzadca sieci,9792,106
+32,informatyk,9378,428
+33,przedstawiciel handlowy,3213,485
+34,ksiegowy,10481,454
+35,kierownik,4141,344
+36,sprzatacz,7655,41
+37,informatyk,6054,404
+38,administrator,10082,455
+39,kierownik,4476,417
+40,informatyk,2549,24
+41,dyrektor,5599,214
+42,administrator,11432,256
+43,mechanik,7021,16
+44,administrator,2445,441
+45,konsultant,9835,469
+46,przedstawiciel handlowy,5377,149
+47,kierownik,12220,293
+48,konsultant,4154,25
+49,kierowca,4059,225
+50,przedstawiciel handlowy,9939,4
+51,mechanik,8283,392
+52,zarzadca sieci,1361,497
+53,konsultant,6137,289
+54,konsultant,11857,458
+55,dyrektor,8154,464
+56,ksiegowy,1425,3
+57,przedstawiciel handlowy,12935,228
+58,kierowca,9527,161
+59,kontroler,6785,124
+60,administrator,6178,472
+61,zarzadca sieci,12002,45
+62,mechanik,12171,184
+63,konsultant,12370,331
+64,kierowca,8727,176
+65,informatyk,12866,27
+66,ksiegowy,1564,236
+67,konsultant,2985,337
+68,kontroler,1677,129
+69,administrator,10105,186
+70,przedstawiciel handlowy,8548,57
+71,sprzatacz,6397,413
+72,dyrektor,3275,12
+73,kontroler,12433,79
+74,administrator,10984,157
+75,kontroler,4062,329
+76,przedstawiciel handlowy,9474,333
+77,informatyk,6385,168
+78,ksiegowy,1332,363
+79,kontroler,11190,173
+80,administrator,10285,279
+81,przedstawiciel handlowy,12214,132
+82,administrator,11200,274
+83,zarzadca sieci,7242,192
+84,dyrektor,9839,285
+85,informatyk,7451,425
+86,kierowca,1584,105
+87,ksiegowy,12344,54
+88,przedstawiciel handlowy,8249,456
+89,konsultant,12307,369
+90,konsultant,10765,164
+91,przedstawiciel handlowy,2713,402
+92,konsultant,3491,50
+93,ksiegowy,4971,201
+94,zarzadca sieci,2223,390
+95,mechanik,5021,95
+96,kierowca,8431,150
+97,zarzadca sieci,2475,259
+98,dyrektor,12660,480
+99,administrator,11859,382
+100,przedstawiciel handlowy,10347,317
+101,przedstawiciel handlowy,8467,269
+102,kierowca,2311,242
+103,ksiegowy,12512,406
+104,zarzadca sieci,9421,244
+105,sprzatacz,9056,204
+106,kontroler,10268,84
+107,dyrektor,12869,145
+108,informatyk,3158,347
+109,ksiegowy,1798,435
+110,kierownik,3824,275
+111,mechanik,4123,345
+112,mechanik,10546,94
+113,kierownik,6708,227
+114,konsultant,3787,160
+115,informatyk,4663,219
+116,ksiegowy,10484,250
+117,kontroler,8917,264
+118,dyrektor,7583,324
+119,sprzatacz,12968,113
+120,kierownik,4700,7
+121,przedstawiciel handlowy,9995,76
+122,kierownik,5767,271
+123,przedstawiciel handlowy,9142,18
+124,dyrektor,9458,233
+125,administrator,11668,385
+126,ksiegowy,6571,398
+127,kontroler,13187,255
+128,ksiegowy,7145,420
+129,kierownik,10823,320
+130,przedstawiciel handlowy,6328,336
+131,kontroler,4171,58
+132,kierownik,7455,29
+133,konsultant,10901,414
+134,kontroler,10538,334
+135,kierowca,6629,461
+136,kierownik,12441,243
+137,informatyk,12330,70
+138,konsultant,1700,80
+139,kontroler,11009,134
+140,przedstawiciel handlowy,6345,260
+141,sprzatacz,2443,239
+142,dyrektor,6420,177
+143,konsultant,7529,354
+144,przedstawiciel handlowy,13162,342
+145,konsultant,11766,53
+146,sprzatacz,8849,98
+147,administrator,11138,102
+148,kierowca,7199,432
+149,ksiegowy,10087,426
+150,dyrektor,5470,488
+151,zarzadca sieci,7274,171
+152,kierowca,5209,356
+153,informatyk,4207,1
+154,przedstawiciel handlowy,6246,463
+155,kierownik,8825,93
+156,zarzadca sieci,3088,241
+157,kierownik,11901,391
+158,ksiegowy,6623,361
+159,przedstawiciel handlowy,6433,291
+160,kierownik,6278,429
+161,dyrektor,4151,209
+162,kierowca,2857,299
+163,kierownik,4208,162
+164,ksiegowy,5417,424
+165,kierowca,4191,409
+166,kierowca,12014,338
+167,kierownik,5739,216
+168,kierowca,12432,44
+169,kontroler,5968,355
+170,kontroler,1281,38
+171,dyrektor,1426,47
+172,mechanik,1498,375
+173,konsultant,12063,77
+174,kontroler,10785,447
+175,kierowca,7008,37
+176,mechanik,2484,32
+177,kierownik,12092,374
+178,ksiegowy,10677,34
+179,administrator,9098,62
+180,dyrektor,6513,335
+181,dyrektor,3824,332
+182,kierownik,10126,372
+183,administrator,6237,146
+184,konsultant,12369,258
+185,kierowca,2079,283
+186,sprzatacz,2986,65
+187,kierowca,7841,128
+188,zarzadca sieci,10685,457
+189,zarzadca sieci,8901,148
+190,ksiegowy,9037,140
+191,zarzadca sieci,4250,422
+192,sprzatacz,5734,206
+193,kierowca,11130,493
+194,mechanik,1479,286
+195,sprzatacz,9635,277
+196,zarzadca sieci,5803,483
+197,dyrektor,3888,491
+198,sprzatacz,5203,213
+199,zarzadca sieci,5331,21
+200,przedstawiciel handlowy,2161,90
+201,administrator,8209,448
+202,dyrektor,4691,139
+203,ksiegowy,2810,416
+204,kierownik,10346,52
+205,kierownik,6691,358
+206,kierownik,3031,144
+207,mechanik,4322,421
+208,ksiegowy,8017,284
+209,mechanik,5125,66
+210,dyrektor,1653,396
+211,dyrektor,11408,449
+212,administrator,12106,377
+213,administrator,6033,475
+214,administrator,1871,85
+215,konsultant,5857,163
+216,kontroler,2948,111
+217,przedstawiciel handlowy,4634,453
+218,dyrektor,6866,296
+219,kierowca,3247,198
+220,ksiegowy,7480,133
+221,mechanik,5517,476
+222,kierownik,1459,138
+223,kierownik,2988,207
+224,sprzatacz,12809,245
+225,informatyk,4529,23
+226,mechanik,1553,304
+227,sprzatacz,1956,306
+228,kierownik,7139,5
+229,informatyk,12616,321
+230,przedstawiciel handlowy,12280,141
+231,przedstawiciel handlowy,9500,189
+232,konsultant,3069,325
+233,przedstawiciel handlowy,8654,481
+234,kierowca,12282,202
+235,mechanik,6519,196
+236,zarzadca sieci,9497,14
+237,informatyk,7766,203
+238,ksiegowy,6037,235
+239,przedstawiciel handlowy,7021,251
+240,konsultant,7649,446
+241,sprzatacz,4338,110
+242,ksiegowy,4369,431
+243,zarzadca sieci,10995,237
+244,kierownik,3881,73
+245,dyrektor,2186,19
+246,sprzatacz,7649,489
+247,kontroler,6552,349
+248,ksiegowy,1873,222
+249,administrator,7009,257
+250,ksiegowy,3839,253
+251,kontroler,11523,60
+252,przedstawiciel handlowy,2530,393
+253,sprzatacz,7668,226
+254,mechanik,5425,312
+255,konsultant,5240,373
+256,dyrektor,10221,484
+257,konsultant,5308,313
+258,kierowca,4072,305
+259,administrator,7186,287
+260,przedstawiciel handlowy,9617,89
+261,konsultant,5993,61
+262,dyrektor,2430,220
+263,informatyk,6087,376
+264,zarzadca sieci,6772,282
+265,kierowca,8230,307
+266,zarzadca sieci,4405,9
+267,sprzatacz,7017,224
+268,kierowca,6022,451
+269,dyrektor,3930,42
+270,przedstawiciel handlowy,3740,450
+271,administrator,10401,445
+272,kontroler,3907,268
+273,sprzatacz,12610,120
+274,konsultant,13003,327
+275,kierownik,6804,270
+276,zarzadca sieci,12431,215
+277,administrator,9690,154
+278,sprzatacz,9731,387
+279,konsultant,1568,195
+280,informatyk,11257,368
+281,kontroler,12883,386
+282,mechanik,2480,20
+283,mechanik,8157,281
+284,zarzadca sieci,8282,248
+285,mechanik,5659,46
+286,sprzatacz,1929,108
+287,informatyk,12605,205
+288,informatyk,6837,378
+289,dyrektor,6810,399
+290,informatyk,1964,278
+291,mechanik,2734,103
+292,administrator,6486,265
+293,dyrektor,6513,272
+294,kierowca,7940,389
+295,informatyk,2964,494
+296,administrator,5237,419
+297,konsultant,8794,474
+298,mechanik,5765,22
+299,sprzatacz,1681,300
+300,kierownik,6546,240
+301,kontroler,4909,280
+302,przedstawiciel handlowy,10923,115
+303,zarzadca sieci,4255,246
+304,zarzadca sieci,5720,430
+305,kierownik,8759,500
+306,mechanik,11713,323
+307,sprzatacz,10771,119
+308,przedstawiciel handlowy,4764,167
+309,kontroler,5890,97
+310,ksiegowy,6965,99
+311,kierowca,2905,477
+312,dyrektor,7964,136
+313,sprzatacz,4177,26
+314,administrator,6790,267
+315,konsultant,9212,59
+316,dyrektor,10241,440
+317,administrator,8866,40
+318,sprzatacz,4249,433
+319,sprzatacz,12188,410
+320,konsultant,10463,178
+321,administrator,11980,183
+322,kierownik,10716,49
+323,dyrektor,9303,230
+324,kontroler,4466,187
+325,dyrektor,1888,121
+326,zarzadca sieci,6379,174
+327,informatyk,8995,83
+328,kontroler,10817,303
+329,przedstawiciel handlowy,10570,100
+330,informatyk,8681,353
+331,zarzadca sieci,2351,180
+332,konsultant,2652,379
+333,informatyk,6191,137
+334,kierownik,2276,247
+335,ksiegowy,8295,67
+336,kierownik,12735,437
+337,konsultant,8622,401
+338,dyrektor,4787,142
+339,informatyk,6895,479
+340,mechanik,2703,339
+341,ksiegowy,6145,78
+342,dyrektor,4473,69
+343,sprzatacz,11204,350
+344,kierowca,12569,82
+345,konsultant,9658,298
+346,kierownik,8865,315
+347,konsultant,3680,155
+348,mechanik,1655,394
+349,kontroler,7816,193
+350,informatyk,10177,330
+351,sprzatacz,11189,55
+352,sprzatacz,1804,130
+353,zarzadca sieci,1489,231
+354,dyrektor,4857,486
+355,kontroler,4302,348
+356,kontroler,10725,88
+357,przedstawiciel handlowy,2167,185
+358,mechanik,7571,383
+359,konsultant,4147,75
+360,dyrektor,6488,191
+361,informatyk,8982,438
+362,sprzatacz,6914,147
+363,kierowca,6371,212
+364,informatyk,5094,238
+365,konsultant,2145,35
+366,konsultant,1764,232
+367,przedstawiciel handlowy,1433,51
+368,kierowca,5018,200
+369,kierowca,12938,365
+370,konsultant,4162,217
+371,konsultant,10633,362
+372,zarzadca sieci,11496,496
+373,mechanik,1880,92
+374,mechanik,6605,482
+375,kierowca,12897,340
+376,dyrektor,5937,131
+377,dyrektor,10224,360
+378,mechanik,4224,351
+379,zarzadca sieci,7338,28
+380,dyrektor,9820,471
+381,administrator,3406,341
+382,kontroler,10786,91
+383,informatyk,6983,490
+384,kontroler,8028,371
+385,kontroler,11019,199
+386,kierownik,4162,427
+387,dyrektor,5459,190
+388,informatyk,11118,384
+389,kierownik,11894,170
+390,konsultant,12539,294
+391,zarzadca sieci,10276,165
+392,ksiegowy,10873,411
+393,kierownik,8861,295
+394,ksiegowy,8752,343
+395,mechanik,1964,249
+396,kierowca,12429,10
+397,kontroler,1347,153
+398,kierowca,5518,181
+399,administrator,12084,117
+400,kierownik,4838,346
+401,przedstawiciel handlowy,11785,465
+402,zarzadca sieci,6798,254
+403,sprzatacz,11200,495
+404,przedstawiciel handlowy,10633,30
+405,sprzatacz,5319,434
+406,sprzatacz,1521,381
+407,informatyk,3216,367
+408,sprzatacz,5059,166
+409,kontroler,11921,499
+410,informatyk,3716,182
+411,mechanik,10810,292
+412,dyrektor,2127,290
+413,kontroler,12564,311
+414,ksiegowy,10236,13
+415,kierownik,3187,252
+416,zarzadca sieci,11598,114
+417,informatyk,10263,359
+418,sprzatacz,2905,104
+419,dyrektor,4517,127
+420,kierowca,10637,423
+421,informatyk,7645,322
+422,konsultant,11364,308
+423,kierownik,8823,473
+424,zarzadca sieci,8900,439
+425,konsultant,4511,116
+426,przedstawiciel handlowy,5714,158
+427,konsultant,3690,143
+428,konsultant,3412,135
+429,kontroler,12340,462
+430,ksiegowy,3264,442
+431,zarzadca sieci,4568,276
+432,konsultant,10438,288
+433,ksiegowy,10635,436
+434,przedstawiciel handlowy,12374,122
+435,informatyk,12789,403
+436,kierowca,8976,221
+437,informatyk,6413,316
+438,sprzatacz,7271,397
+439,administrator,12464,273
+440,administrator,10160,56
+441,informatyk,4701,109
+442,sprzatacz,4557,318
+443,informatyk,5008,452
+444,sprzatacz,3952,468
+445,konsultant,4473,39
+446,konsultant,12142,31
+447,przedstawiciel handlowy,8504,498
+448,przedstawiciel handlowy,6370,234
+449,przedstawiciel handlowy,10744,266
+450,dyrektor,1531,459
+451,mechanik,9029,218
+452,dyrektor,6180,309
+453,kierownik,1771,301
+454,administrator,6189,81
+455,kierownik,3308,6
+456,sprzatacz,9595,2
+457,dyrektor,10334,17
+458,administrator,2409,366
+459,kierownik,6815,395
+460,konsultant,6393,263
+461,sprzatacz,4789,152
+462,mechanik,6555,302
+463,informatyk,9831,179
+464,kierownik,6808,310
+465,mechanik,6737,123
+466,przedstawiciel handlowy,6139,101
+467,kierownik,7048,86
+468,sprzatacz,5757,33
+469,kierowca,12107,400
+470,administrator,3244,48
+471,kierownik,5313,467
+472,mechanik,3064,364
+473,zarzadca sieci,7029,107
+474,ksiegowy,9114,11
+475,kierownik,7019,71
+476,dyrektor,10881,352
+477,mechanik,9822,126
+478,konsultant,2137,87
+479,kierowca,12023,418
+480,ksiegowy,6842,8
+481,sprzatacz,9228,405
+482,dyrektor,2443,156
+483,administrator,3410,63
+484,kierowca,8465,262
+485,sprzatacz,2113,74
+486,kontroler,5368,326
+487,kierowca,4611,194
+488,kierownik,9020,460
+489,zarzadca sieci,12824,407
+490,sprzatacz,3060,388
+491,administrator,13065,314
+492,przedstawiciel handlowy,2588,444
+493,kierownik,8710,169
+494,kierowca,1566,492
+495,administrator,9182,112
+496,administrator,12924,470
+497,kierownik,6875,175
+498,administrator,5725,197
+499,zarzadca sieci,8824,297
+500,mechanik,2834,118

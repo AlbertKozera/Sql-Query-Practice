@@ -1,0 +1,6 @@
+load data
+infile 'Pojazdy.csv'
+insert
+into table Pojazdy
+fields terminated by ','
+(id_pojazdu, nr_rejestracyjny, typ)

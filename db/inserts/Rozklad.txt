@@ -1,0 +1,6 @@
+load data
+infile 'Rozklad.csv'
+insert
+into table Rozklad
+fields terminated by ','
+(id_rozkladu, liczba_przystankow)

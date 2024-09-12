@@ -1,0 +1,6 @@
+load data
+infile 'Rok.csv'
+insert
+into table Rok
+fields terminated by ','
+(id_roku, numer)

@@ -1,0 +1,123 @@
+DROP TABLE Rozklad CASCADE CONSTRAINTS;
+DROP TABLE Osoba CASCADE CONSTRAINTS;
+DROP TABLE Firma CASCADE CONSTRAINTS;
+DROP TABLE Pojazdy CASCADE CONSTRAINTS;
+DROP TABLE Linia CASCADE CONSTRAINTS;
+DROP TABLE Pracownik CASCADE CONSTRAINTS;
+DROP TABLE Miasto CASCADE CONSTRAINTS;
+DROP TABLE Dzien CASCADE CONSTRAINTS;
+DROP TABLE Miesiac CASCADE CONSTRAINTS;
+DROP TABLE Rok CASCADE CONSTRAINTS;
+DROP TABLE Czas CASCADE CONSTRAINTS;
+DROP TABLE PRZEJAZD CASCADE CONSTRAINTS;
+
+
+
+
+CREATE TABLE Rozklad(
+    id_rozkladu NUMBER(6),
+    liczba_przystankow NUMBER(20)
+);
+
+CREATE TABLE Osoba(
+    id_osoby NUMBER(6),
+    imie VARCHAR2(20),
+    nazwisko VARCHAR2(20),
+    pesel NUMBER(11)
+);
+
+CREATE TABLE Firma(
+    id_firmy NUMBER(6),
+    nip NUMBER(10),
+    nazwa_firmy VARCHAR2(32)    
+);
+
+CREATE TABLE Pojazdy(
+    id_pojazdu NUMBER(6),
+    nr_rejestracyjny VARCHAR2(20),
+    typ VARCHAR2(20)    
+);
+
+CREATE TABLE Linia(
+    id_linii NUMBER(6),
+    rodzaj_linii VARCHAR2(16),
+    id_rozkladu NUMBER(10)   
+);
+
+CREATE TABLE Pracownik(
+    id_pracownika NUMBER(6),
+    stanowisko VARCHAR2(100),
+    pensja NUMBER,
+    id_osoby NUMBER(6)
+);
+
+CREATE TABLE Miasto(
+    id_miasta NUMBER(6),
+    nazwa_miasta VARCHAR2(20),
+    wojewodztwo VARCHAR2(20)
+);
+
+CREATE TABLE Dzien(
+    id_dnia NUMBER(6),
+    nazwa VARCHAR2(16)
+);
+
+CREATE TABLE Miesiac(
+    id_miesiaca NUMBER(6),
+    nazwa VARCHAR2(16)
+);
+
+CREATE TABLE Rok(
+    id_roku NUMBER(6),
+    numer NUMBER(6)
+);
+
+CREATE TABLE Czas(
+    id_czasu NUMBER(6),
+    data_przejazdu DATE,
+    id_dnia NUMBER(6),
+    id_miesiaca NUMBER(6),
+    id_roku NUMBER(6)
+);
+
+
+CREATE TABLE PRZEJAZD(
+    id_przejazdu NUMBER(6),
+    id_czasu NUMBER(6),
+    id_firmy NUMBER(6),
+    id_linii NUMBER(6),
+    id_pracownika NUMBER(6),
+    id_pojazdu NUMBER(6),
+    id_miasta NUMBER(6),
+    liczba_bil_normalnych NUMBER(6),
+    liczba_bil_ulgowych NUMBER(6),
+    liczba_bil_miesiecznych NUMBER(6),
+    ilosc_skasow_biletow NUMBER(6),
+    calkowity_zysk NUMBER(6), 
+    liczba_kilometrow NUMBER(6),
+    czas_trwania NUMBER(6)
+);
+
+ALTER TABLE Rozklad ADD CONSTRAINT Rozklad_PK PRIMARY KEY(id_rozkladu);
+ALTER TABLE Osoba ADD CONSTRAINT Osoba_PK PRIMARY KEY(id_osoby);
+ALTER TABLE Firma ADD CONSTRAINT Firma_PK PRIMARY KEY(id_firmy);
+ALTER TABLE Pojazdy ADD CONSTRAINT Pojazd_PK PRIMARY KEY(id_pojazdu);
+ALTER TABLE Linia ADD CONSTRAINT Linia_PK PRIMARY KEY(id_linii);
+ALTER TABLE Linia ADD CONSTRAINT Linia_Rozklad_FK FOREIGN KEY (id_rozkladu) REFERENCES Rozklad(id_rozkladu);
+ALTER TABLE Pracownik ADD CONSTRAINT Pracownik_PK PRIMARY KEY(id_pracownika);
+ALTER TABLE Pracownik ADD CONSTRAINT Pracownik_Osoba_FK FOREIGN KEY (id_osoby) REFERENCES Osoba(id_osoby);
+ALTER TABLE Miasto ADD CONSTRAINT Miasto_PK PRIMARY KEY(id_miasta);
+ALTER TABLE Dzien ADD CONSTRAINT Dzien_PK PRIMARY KEY(id_dnia);
+ALTER TABLE Miesiac ADD CONSTRAINT Miesiac_PK PRIMARY KEY(id_miesiaca);
+ALTER TABLE Rok ADD CONSTRAINT Rok_PK PRIMARY KEY(id_roku);
+ALTER TABLE Czas ADD CONSTRAINT Czas_PK PRIMARY KEY(id_czasu);
+ALTER TABLE Czas ADD CONSTRAINT Czas_Dzien_FK FOREIGN KEY (id_dnia) REFERENCES Dzien(id_dnia);
+ALTER TABLE Czas ADD CONSTRAINT Czas_Miesiac_FK FOREIGN KEY (id_miesiaca) REFERENCES Miesiac(id_miesiaca);
+ALTER TABLE Czas ADD CONSTRAINT Czas_Rok_FK FOREIGN KEY (id_roku) REFERENCES Rok(id_roku);
+ALTER TABLE PRZEJAZD ADD CONSTRAINT PRZEJAZD_PK PRIMARY KEY (id_przejazdu);
+ALTER TABLE PRZEJAZD ADD CONSTRAINT PRZEJAZD_Czas_FK FOREIGN KEY (id_czasu) REFERENCES Czas(id_czasu);
+ALTER TABLE PRZEJAZD ADD CONSTRAINT PRZEJAZD_Firma_FK FOREIGN KEY (id_firmy) REFERENCES Firma(id_firmy);
+ALTER TABLE PRZEJAZD ADD CONSTRAINT PRZEJAZD_Linia_FK FOREIGN KEY (id_linii) REFERENCES Linia(id_linii);
+ALTER TABLE PRZEJAZD ADD CONSTRAINT PRZEJAZD_Pracownik_FK FOREIGN KEY (id_pracownika) REFERENCES Pracownik(id_pracownika);
+ALTER TABLE PRZEJAZD ADD CONSTRAINT PRZEJAZD_Pojazdy_FK FOREIGN KEY (id_pojazdu) REFERENCES Pojazdy(id_pojazdu);
+ALTER TABLE PRZEJAZD ADD CONSTRAINT PRZEJAZD_Miasto_FK FOREIGN KEY (id_miasta) REFERENCES Miasto(id_miasta);

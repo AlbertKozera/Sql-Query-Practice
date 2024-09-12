@@ -1,0 +1,30 @@
+<%@ page language="PL/SQL" %>
+<%@ plsql procedure="P2" %>
+
+<html>
+	<head>
+		<title>PARTITION_BY_2</title>
+	</head>
+	<body>
+	<center>
+				<a href="Menu_Glowne">Back</a></center>
+				<center>
+				<table border="1">
+				<td>ID_POJAZDU</td>
+				<td>ID_LINII</td>
+				<td>PROCENT</td>
+				<% FOR I IN (SELECT DISTINCT PRZEJAZD.ID_POJAZDU, PRZEJAZD.ID_LINII,
+					ROUND((100*COUNT(*) OVER (PARTITION BY PRZEJAZD.ID_POJAZDU,PRZEJAZD.ID_LINII)/COUNT(*)
+					OVER (PARTITION BY PRZEJAZD.ID_POJAZDU)),2) AS "PROCENT"
+					FROM PRZEJAZD ORDER BY PRZEJAZD.ID_POJAZDU, PRZEJAZD.ID_LINII) LOOP %>
+				<tr>			
+					<td><%= I.ID_POJAZDU%></td>
+					<td><%= I.ID_LINII%></td>
+					<td><%= I.PROCENT%></td>
+				<tr>
+				<% END LOOP; %>
+			</table>
+			</form>
+		</center>
+	</body>
+</html>

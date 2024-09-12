@@ -1,0 +1,6 @@
+load data
+infile 'Pracownik.csv'
+insert
+into table Pracownik
+fields terminated by ','
+(id_pracownika, stanowisko, pensja, id_osoby)

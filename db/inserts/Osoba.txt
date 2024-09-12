@@ -1,0 +1,6 @@
+load data
+infile 'Osoba.csv'
+insert
+into table Osoba
+fields terminated by ','
+(id_osoby, imie, nazwisko, pesel)

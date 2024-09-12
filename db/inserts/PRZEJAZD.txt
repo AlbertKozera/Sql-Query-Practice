@@ -1,0 +1,6 @@
+load data
+infile 'PRZEJAZD.csv'
+insert
+into table PRZEJAZD
+fields terminated by ','
+(id_przejazdu, id_czasu, id_firmy, id_linii, id_pracownika, id_pojazdu, id_miasta, liczba_bil_normalnych, liczba_bil_ulgowych, liczba_bil_miesiecznych, ilosc_skasow_biletow, calkowity_zysk, liczba_kilometrow, czas_trwania)

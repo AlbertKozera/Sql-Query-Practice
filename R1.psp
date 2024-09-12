@@ -1,0 +1,30 @@
+<%@ page language="PL/SQL" %>
+<%@ plsql procedure="R1" %>
+
+<html>
+	<head>
+		<title>ROLLUP_1</title>
+	</head>
+	<body>
+	<center>
+				<a href="Menu_Glowne">Back</a></center>
+				<center>
+				<table border="1">
+				<td>DATA</td>
+				<td>LICZBA_SKASOWANYCH_BIL_ULG</td>
+				<td>LINIA</td>
+				<% FOR I IN (SELECT CZAS.DATA_PRZEJAZDU AS DATA, PRZEJAZD.LICZBA_BIL_ULGOWYCH AS LICZBA_SKASOWANYCH_BIL_ULG, 
+					PRZEJAZD.ID_LINII AS LINIA FROM PRZEJAZD 
+					JOIN CZAS ON PRZEJAZD.ID_CZASU=CZAS.ID_CZASU 
+					GROUP BY ROLLUP(CZAS.DATA_PRZEJAZDU, PRZEJAZD.LICZBA_BIL_ULGOWYCH, PRZEJAZD.ID_LINII)) LOOP %>
+				<tr>			
+					<td><%= I.DATA%></td>
+					<td><%= I.LICZBA_SKASOWANYCH_BIL_ULG%></td>
+					<td><%= I.LINIA%></td>
+				<tr>
+				<% END LOOP; %>
+			</table>
+			</form>
+		</center>
+	</body>
+</html>

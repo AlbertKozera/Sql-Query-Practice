@@ -1,0 +1,27 @@
+<%@ page language="PL/SQL" %>
+<%@ plsql procedure="C1" %>
+
+<html>
+	<head>
+		<title>CUBE_1</title>
+	</head>
+	<body>
+	<center>
+				<a href="Menu_Glowne">Back</a></center>
+				<center>
+				<table border="1">
+				<td>STANOWISKO</td>
+				<td>PENSJA</td>
+				<% FOR I IN (SELECT DISTINCT PRACOWNIK.STANOWISKO, PRACOWNIK.PENSJA
+					FROM PRACOWNIK
+					GROUP BY CUBE(PRACOWNIK.PENSJA, PRACOWNIK.STANOWISKO)) LOOP %>
+				<tr>			
+					<td><%= I.STANOWISKO%></td>
+					<td><%= I.PENSJA%></td>
+				<tr>
+				<% END LOOP; %>
+			</table>
+			</form>
+		</center>
+	</body>
+</html>

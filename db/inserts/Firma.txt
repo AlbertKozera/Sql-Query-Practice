@@ -1,0 +1,6 @@
+load data
+infile 'Firma.csv'
+insert
+into table Firma
+fields terminated by ','
+(id_firmy, nip, nazwa_firmy)

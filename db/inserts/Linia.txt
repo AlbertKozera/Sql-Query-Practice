@@ -1,0 +1,6 @@
+load data
+infile 'Linia.csv'
+insert
+into table Linia
+fields terminated by ','
+(id_linii, rodzaj_linii, id_rozkladu)

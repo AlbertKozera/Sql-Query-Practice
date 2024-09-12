@@ -1,0 +1,6 @@
+load data
+infile 'Miesiac.csv'
+insert
+into table Miesiac
+fields terminated by ','
+(id_miesiaca, nazwa)

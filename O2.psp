@@ -1,0 +1,31 @@
+<%@ page language="PL/SQL" %>
+<%@ plsql procedure="O2" %>
+
+<html>
+	<head>
+		<title>OKNA_2</title>
+	</head>
+	<body>
+	<center>
+				<a href="Menu_Glowne">Back</a></center>
+				<center>
+				<table border="1">
+				<td>DATA_PRZEJAZDU</td>
+				<td>ID_PRZEJAZDU</td>
+				<td>SREDNIA_LICZBA_KILOMETROW</td>
+				<% FOR I IN (SELECT DISTINCT CZAS.DATA_PRZEJAZDU, PRZEJAZD.ID_PRZEJAZDU, 
+					ROUND(AVG(PRZEJAZD.LICZBA_KILOMETROW) OVER (PARTITION BY PRZEJAZD.ID_CZASU
+					ORDER BY TO_DATE(TO_CHAR(ROK.NUMER), 'YYYY') RANGE BETWEEN INTERVAL '2' YEAR PRECEDING AND CURRENT ROW),2) AS SREDNIA_LICZBA_KILOMETROW
+					FROM PRZEJAZD, CZAS, ROK WHERE CZAS.ID_CZASU = PRZEJAZD.ID_CZASU AND ROK.ID_ROKU = CZAS.ID_ROKU AND ROK.NUMER BETWEEN 2015 AND 2017
+					ORDER BY CZAS.DATA_PRZEJAZDU) LOOP %>
+				<tr>			
+					<td><%= I.DATA_PRZEJAZDU%></td>
+					<td><%= I.ID_PRZEJAZDU%></td>
+					<td><%= I.SREDNIA_LICZBA_KILOMETROW%></td>
+				<tr>
+				<% END LOOP; %>
+			</table>
+			</form>
+		</center>
+	</body>
+</html>

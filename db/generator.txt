@@ -1,0 +1,236 @@
+
+
+import java.util.Random;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+
+///
+class Osoba extends generator {
+	private String imie;
+	private String nazwisko;
+	private Long pesel;
+
+	public Osoba() throws FileNotFoundException {
+		Random generator= new Random();
+		PrintWriter zapis = new PrintWriter("Osoba.csv");
+		for (int i = 1; i < 501; i++) {
+			imie = imiona[r.nextInt(imiona.length)];
+			nazwisko = nazwiska[r.nextInt(nazwiska.length)];
+			int r = generator.nextInt(pesele.length);
+			pesel= pesele[r];
+			zapis.println(i + "," + this.imie + "," + this.nazwisko + "," + this.pesel);
+		}
+		zapis.close();
+	}
+}
+///
+class Rozklad extends generator {
+	private Integer liczba_przystankow;
+
+	public Rozklad() throws FileNotFoundException {
+		Random generator= new Random();
+		PrintWriter zapis = new PrintWriter("Rozklad.csv");
+		for (int i = 1; i < 501; i++) {
+			int r = generator.nextInt(przystanki.length);
+			liczba_przystankow = przystanki[r];
+			zapis.println(i + "," + this.liczba_przystankow);
+		}
+		zapis.close();
+	}
+}
+///
+class Firma extends generator {
+	private Long nip;
+	private String nazwa_firmy;
+
+	public Firma() throws FileNotFoundException {
+		Random generator= new Random();
+		PrintWriter zapis = new PrintWriter("Firma.csv");
+		for (int i = 1; i < 501; i++) {
+			int r = generator.nextInt(nipy.length);
+			nip = nipy[r];
+			nazwa_firmy = nazwy_firm[r];
+			zapis.println(i + "," + this.nip + "," + this.nazwa_firmy);
+		}
+		zapis.close();
+	}
+}
+///
+class Pojazdy extends generator {
+	private String nr_rej;
+	private String typ;
+
+	public Pojazdy() throws FileNotFoundException {
+		PrintWriter zapis = new PrintWriter("Pojazdy.csv");
+		for (int i = 1; i < 501; i++) {
+			nr_rej = tablice[r.nextInt(tablice.length)];
+			typ = typy[r.nextInt(typy.length)];
+			zapis.println(i + "," + this.nr_rej + "," + this.typ);
+		}
+		zapis.close();
+	}
+}
+///
+class Linia extends generator {
+	private String rodzaj_lini;
+
+	public Linia() throws FileNotFoundException {
+		
+		Integer[] lista = new Integer[500];
+		Arrays.setAll(lista, i -> i + 1);
+		List<Integer> list = Arrays.asList(lista);
+		Collections.shuffle(list);
+		int[] numbers = list.stream().mapToInt(i->i).toArray();
+
+		PrintWriter zapis = new PrintWriter("Linia.csv");
+		
+		for (int i = 1; i < 501; i++) {
+			rodzaj_lini = rodzaje_linii[r.nextInt(rodzaje_linii.length)];
+			zapis.println(i + "," + this.rodzaj_lini + "," + numbers[i-1]);
+		}
+		zapis.close();
+	}
+}
+///
+class Pracownik extends generator {
+	private String stanowisko;
+
+	public Pracownik() throws FileNotFoundException {		
+		Integer[] lista = new Integer[500];
+		Arrays.setAll(lista, i -> i + 1);
+		List<Integer> list = Arrays.asList(lista);
+		Collections.shuffle(list);
+		int[] numbers = list.stream().mapToInt(i->i).toArray();
+
+		PrintWriter zapis = new PrintWriter("Pracownik.csv");
+		for (int i = 1; i < 501; i++) {
+			stanowisko = stanowiska[r.nextInt(stanowiska.length)];
+			zapis.println(i + "," + this.stanowisko + "," + (r.nextInt(12000) +1250) + "," + numbers[i-1]);
+		}
+		zapis.close();
+	}
+}
+///
+class Miasto extends generator {
+	private String miasto_wojewodztwo;
+
+	public Miasto() throws FileNotFoundException {
+		PrintWriter zapis = new PrintWriter("Miasto.csv");
+		for (int i = 1; i < 501; i++) {
+			miasto_wojewodztwo = miasta[r.nextInt(miasta.length)];
+			zapis.println(i + "," + this.miasto_wojewodztwo);
+		}
+		zapis.close();
+	}
+}
+///
+class Czas extends generator {
+	private int dzien;
+	private int miesiac;
+	private int rok;
+	private int tmp;
+	public Czas() throws FileNotFoundException {
+		
+		PrintWriter zapis = new PrintWriter("Czas.csv");
+		for (int i = 1; i < 501; i++) {
+			miesiac = (r.nextInt(12) +1);
+			dzien = (r.nextInt(31) +1);
+			if( (miesiac == 4 || miesiac == 6 || miesiac == 9 || miesiac == 11) && (dzien == 31) )
+				dzien = (r.nextInt(30) +1);
+			if( (miesiac == 2) && (dzien > 28))
+				dzien = (r.nextInt(28) +1);
+			rok = lata[r.nextInt(lata.length)];
+			if(rok == 2015)
+				tmp = 1;
+			if(rok == 2016)
+				tmp = 2;
+			if(rok == 2017)
+				tmp = 3;
+			if(rok == 2018)
+				tmp = 4;
+			zapis.println(i + "," +  this.rok + "-" + this.miesiac + "-" + this.dzien + "," + this.dzien + "," + this.miesiac + "," + this.tmp);
+		}
+		zapis.close();
+	}
+}
+///
+class PRZEJAZD extends generator {
+	private int liczba_bil_normalnych;
+	private int liczba_bil_ulgowych;
+	private int liczba_bil_miesiecznych;
+	private int calkowity_zysk;
+	private int ilosc_skasow_biletow;
+	private int liczba_kilometrow;
+	private int czas_trwania;
+	
+
+	public PRZEJAZD() throws FileNotFoundException {
+		PrintWriter zapis = new PrintWriter("PRZEJAZD.csv");
+		for (int i = 1; i < 5001; i++) {
+			liczba_bil_normalnych = (r.nextInt(120) +1);
+			liczba_bil_ulgowych = (r.nextInt(100) +1);
+			liczba_bil_miesiecznych = (r.nextInt(20) +1);
+			ilosc_skasow_biletow = liczba_bil_normalnych + liczba_bil_ulgowych + liczba_bil_miesiecznych;
+			calkowity_zysk = (liczba_bil_normalnych * 3) + (liczba_bil_ulgowych * 2);
+			liczba_kilometrow = (r.nextInt(75) +1);
+			czas_trwania = liczba_kilometrow * 5;
+			
+			zapis.println(i + "," + (r.nextInt(500) +1) + "," + (r.nextInt(500) +1) + "," + (r.nextInt(500) +1) + "," + (r.nextInt(500) +1) + "," + (r.nextInt(500) +1) + "," + (r.nextInt(500) +1) + "," +
+			this.liczba_bil_normalnych + "," + this.liczba_bil_ulgowych + "," + this.liczba_bil_miesiecznych + "," + this.ilosc_skasow_biletow + "," + this.calkowity_zysk + "," + 
+			this.liczba_kilometrow + "," + this.czas_trwania);                                                                
+		}
+		zapis.close();
+	}
+}
+///
+///
+///
+public class generator {
+	public Random r = new Random();
+	public int n=0,u=0,m=0;
+	protected String[] imiona = { "Jan", "Marian", "Andrzej", "Bartosz", "Agnieszka", "Sylwia", "Piotr", "Kamil",
+			"Sebastian", "Norbert", "Michal", "Pawel", "Lukasz", "Lucyfer", "Agata", "Zofia", "Alicja"};
+	protected String[] nazwiska = { "Nowak", "Wojcik", "Kowalczyk", "Wozniak", "Kaczmarek", "Mazur", "Krawczyk",
+			"Adamczyk", "Dudek", "Krakowiak", "Kozera", "Gajda", "Kowalski", "Lewandowski", "Malysz" };
+
+	
+	protected Long[] pesele = { 00012307373L, 55021244018L, 99111468896L, 38320961931L, 85090340191L, 67071636099L, 77021038475L, 22010902879L, 67120823096L, 75211831892L, 39091052074L, 10242303254L, 
+			82101324818L, 36081051791L, 77090259016L, 45021953014L, 25010343055L, 45120300618L, 27100746658L, 69071595338L, 47111730457L, 64040160834L, 69052519410L, 45050211455L, 85022448814L, 68053023915L,
+			62042600811L, 48060892652L, 11082189415L, 11312940177L, 06270446636L, 48030171158L, 16261005618L, 78120854610L, 58111468817L, 36272318579L, 43072046291L, 98070776673L, 56322466294L, 14062526251L };
+	protected Integer[] przystanki = { 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30 };
+	protected Long[] nipy = { 3851536185L, 1667532528L, 8266293932L, 2541532413L, 7476103713L, 8499649497L, 5898512054L, 2864571131L, 9995062741L, 5478181018L, 5180626808L, 3736180980L, 2799786752L,
+							  2934421260L, 2934421260L, 6771822536L, 1320969074L, 7147397961L, 9543131768L, 6140822165L, 6620461164L, 5138603868L, 6329546366L, 9842821506L, 3995158461L, 6824714454L};
+	protected String[] nazwy_firm = { "axfa", "agas", "xaga", "axga", "ahhwas", "hhhas", "hasbro", "hagha", "ahju", "nbju", "hjkaxx", "uuuuSd", "xxzD", "HUX", "agags", " aaxg", "jasgg", "Mauwgn",
+									  "nxzbna", "abaxzvb", "ahjjh", "juuk", "agax", "axe", "xbza", "zzaqw", "xzvbasa", "azgba", "zawec", "zxzh", "hjuas", "gzge", "gzxd23", "zsaf2", "zfaw", "zgade"};
+	protected String[] tablice = { "WSKCP37", " WSKAS25", "WSXA21", "TKI15AF", "TKI12FA", "TKI26BF", "TKI26KV", "KWU2208", "KRZ2215", "HPGA496", "TPI15VF", "TPI15FD", "WAS12DG", "WG35HJ", "AF2DGS",
+								   "CERCD21", "JUSA24", "JO25FG", "KR26GF", "TPI25RE"};
+	protected String[] typy = { "przegubowy", "klasyczny", "pietrowy" };
+	protected String[] rodzaje_linii = { "nocna" , "nieparzysta", "parzysta", "lokalna", "normalna" };
+	protected String[] stanowiska = { "kierownik", "dyrektor", "ksiegowy", "konsultant", "przedstawiciel handlowy", "kierowca", "administrator", "informatyk", "zarzadca sieci", "kontroler", 
+						               "mechanik", "sprzatacz" };
+	protected String[] miasta = { "Kielce,Swietokrzyskie", "Krakow,Malopolskie", "Poznan,Wielkopolskie", "Warszawa,Mazowieckie", "Radom,Mazowieckie", "Gdynia,Pomorskie",
+								  "Wroclaw,Dolnoslaskie", "Sosnowiec,Slaskie", "Gdansk,Pomorskie", "Czestochowa,Slaskie", "Suwalki,Podlaskie" };
+	protected String[] nazwa_dnia = { "Poniedzialek", "Wtorek", "Sroda", "Czwartek", "Piatek", "Sobota", "Niedziela" };
+	protected String[] nazwa_miesiaca = { "Styczen" , "Luty" , "Marzec", "Kwiecien", "Maj", "Czerwiec", "Lipiec", "Sierpien", "Wrzesien", "Pazdziernik", "Listopad", "Grudzien" };
+	protected Integer[] lata = {2015, 2016, 2017, 2018};
+	public generator() {
+	}
+
+	@SuppressWarnings("unused")
+	public static void main(String[] args) throws FileNotFoundException {
+		Osoba x = new Osoba();
+		Rozklad r = new Rozklad();
+		Firma f = new Firma();
+		Pojazdy p = new Pojazdy();
+		Linia l = new Linia();
+		Pracownik pr = new Pracownik();
+		Miasto m = new Miasto();
+		Czas cz = new Czas();
+		PRZEJAZD PZ = new PRZEJAZD();
+
+	}
+}

@@ -1,0 +1,20 @@
+<%@ page language="PL/SQL" %>
+<%@ plsql procedure="Menu_Glowne" %>
+
+<html>
+	<head>
+		<title>Menu</title>
+	</head>
+	<body>
+		<center><a href="R1">ROLLUP_1</a></center>
+		<center><a href="R2">ROLLUP_2</a></center>
+		<center><a href="C1">CUBE_1</a></center>
+		<center><a href="C2">CUBE_2</a><center>
+		<center><a href="P1">PARTITION_BY_1</a><center>
+		<center><a href="P2">PARTITION_BY_2</a><center>
+		<center><a href="G1">GROUPING_SETS_1</a><center>
+		<center><a href="G2">GROUPING_SETS_2</a><center>
+		<center><a href="O1">Okna_1</a><center>
+		<center><a href="O2">Okna_2</a><center>
+	</body>
+</html>

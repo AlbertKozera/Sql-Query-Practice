@@ -1,0 +1,11 @@
+1)sqlplus / as sysdba
+2)connect login/haslo as SYSDBA
+3)GRANT XDBADMIN TO login
+4)/
+5)BEGIN
+	DBMS_EPG.create_dad(
+	dad_name=>'mydad',
+	path=>'/plsql/*');
+	END;
+	/
+6)http://127.0.0.1:8080//dad/plsql/nazwa_procedury

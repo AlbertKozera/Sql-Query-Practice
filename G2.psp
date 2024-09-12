@@ -1,0 +1,31 @@
+<%@ page language="PL/SQL" %>
+<%@ plsql procedure="G2" %>
+
+<html>
+	<head>
+		<title>GROUPING_SETS_2</title>
+	</head>
+	<body>
+	<center>
+				<a href="Menu_Glowne">Back</a></center>
+				<center>
+				<table border="1">
+				<td>ID_POJAZDU</td>
+				<td>ID_LINII</td>
+				<td>KILOMETRY</td>
+				<% FOR I IN (SELECT NVL(TO_CHAR(PRZEJAZD.ID_POJAZDU),'DLA WSZYSTKICH') AS ID_POJAZDU, PRZEJAZD.ID_LINII AS ID_LINII, PRZEJAZD.LICZBA_KILOMETROW AS KILOMETRY
+					FROM PRZEJAZD GROUP BY grouping SETS(
+					(PRZEJAZD.ID_POJAZDU) ,
+					(PRZEJAZD.ID_POJAZDU, PRZEJAZD.ID_LINII, PRZEJAZD.LICZBA_KILOMETROW )
+					)) LOOP %>
+				<tr>			
+					<td><%= I.ID_POJAZDU%></td>
+					<td><%= I.ID_LINII%></td>
+					<td><%= I.KILOMETRY%></td>
+				<tr>
+				<% END LOOP; %>
+			</table>
+			</form>
+		</center>
+	</body>
+</html>
